@@ -24,10 +24,10 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 function playGame() {
-  function playRound(humanChoice, computerChoice) {
-    let humanScore = 0;
-    let computerScore = 0;
+  let humanScore = 0;
+  let computerScore = 0;
 
+  function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
       console.log(`It's a draw! ${computerChoice} V ${humanChoice}`);
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
@@ -43,20 +43,10 @@ function playGame() {
       console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
       computerScore++;
     }
-
-    //MAKE THE GAME GO AS LONG AS THE SCORE IS LESS THAN 5
-    // if (humanScore === 5) {
-    //   console.log("Winner winner");
-    // } else if (computerScore === 5) {
-    //   console.log("Winner winner");
-    // } else {
-    //   getHumanChoice();
-    //   getComputerChoice();
-    // }
-
-    console.log(humanScore);
-    console.log(computerScore);
   }
+
+  console.log(humanScore);
+  console.log(computerScore);
   playRound(humanSelection, computerSelection);
 }
 
